@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css" id="csslink">
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<title>Bootstrap Page</title>
+	<script>
+	    function toggleCSS() {
+          // Obtains the <link> element that links to the css (by using its id).
+          var currentCSS = document.getElementById('csslink');
+
+          // Change the value of href attribute to change the css file.
+          if (currentCSS.getAttribute('href') == 'main.css') {
+            currentCSS.setAttribute('href', 'alternate.css');
+          } else {
+            currentCSS.setAttribute('href', 'main.css');
+          }
+      }
+	</script>
+</head>
+<body class="statAdjustment">
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="overview.html">Player Overview</a></li>
+				<li><a href="stats.html">Player's Stats</a></li>
+				<li><a href="gallery.html">Photo Gallery</a></li>
+				<li><a href="bootstrap.html" class="active">Bootstrap Page</a></li>
+			</ul>
+		</nav>
+		<button onclick="toggleCSS()" style="cursor:pointer">Switch Style</button>
+	</header>
+	<main>
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+	  <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/8d851a73277509.Y3JvcCwxOTk5LDE1NjQsMCwyMTc.jpg" class="d-block w-100" alt="Patrick Mahomes">
+    </div>
+	<div class="carousel-item">
+      <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/4de968109330223.Y3JvcCw0ODAwLDM3NTQsMCwxMTE2.jpg" class="d-block w-100" alt="Joe Burrow">
+    </div>
+    <div class="carousel-item">
+      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/9a0234151157357.Y3JvcCw4MDgsNjMyLDAsODQ.jpg" class="d-block w-100" alt="Justin Jefferson">
+    </div>
+	<div class="carousel-item">
+	  <img src="https://mir-s3-cdn-cf.behance.net/projects/404/e4ad7d154555605.Y3JvcCwxOTIwLDE1MDEsMCw0NDY.jpg" class="d-block w-100" alt="Jalen Hurts">
+    </div>
+	<div class="carousel-item">
+      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/39e93a106119911.Y3JvcCwxOTk5LDE1NjQsMCw0NzA.png" class="d-block w-100" alt="Josh Allen">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+	</main>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+<footer>
+	&copy; 2023 Alexander McFarland/Abhiram Nelluri/David DiCesare/Ian Harrison (Group 2)
+</footer>
+</html>

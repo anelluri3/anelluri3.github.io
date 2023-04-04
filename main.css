@@ -1,6 +1,6 @@
 
 /*Placing the switch style button in the top right of the webpage*/
-button {
+.switchButton {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -11,32 +11,68 @@ button {
 
 /*USED FOR HEADER FORMATTING */
 
-nav {
+/* Style the navigation menu */
+.topnav, .dropdown-btn{
+  overflow: hidden;
   background-color: black;
-  display: flex; /* This makes the nav a flex container */
-}
-nav ul {
-  list-style-type: none; /* Removes bullet points */
-  margin: 0; /* Removes margins */
-  padding: 0; /* Removes padding */
-  display: flex; /* This makes the ul a flex container */
-}
-nav li {
-  flex: 1; /* This makes the li elements take up equal space within the container */
-}
-nav a {
+  position: relative;
   color: white;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a, .dropdown-btn {
+  color: white;
+  padding: 20px 20px;
   text-decoration: none;
-  padding: 10px;
-  display: block; /* This makes the a element fill the entire li element */
-  text-align: center; /* This centers the text within the a element */
+  font-size: 17px;
+  display: block;
+  background-color:black;
 }
-nav a:hover {
-  color: gray;
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
-nav a.active {
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover, .dropdown-btn:hover {
+  background-color: #ddd;
   color: red;
 }
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: black;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+  color:white;
+}
+nav a.active {
+  background-color: blue;
+}
+
+.topnav, .topnav ul{list-style:none}
+
+
 /*END OF HEADER FORMATTING*/
 
 /*USED FOR HYPERLINK FORMATTING*/
@@ -55,16 +91,50 @@ nav a.active {
 table {
     border: 1px solid black;
 	border-collapse:collapse;
+	margin-left:100px;
 }
 td, th {
     border: 1px solid black;
     padding: 8px;
+}
+tr:hover {
+	background-color: red;
+}
+
+tr:nth-child(1) {
+	background-color: rgb(100,100,100);
+}
+tr:nth-child(2) {
+	background-color: rgb(150,150,150);
 }
 /*END OF FORMATTING FOR THE TABLE*/
 
 .overviewP {
 	text-indent: 50px; /*Indenting the paragraphs on the player overview tab*/
 }
+/*carousel conrol styling*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  color:black;
+  background-size: 100%, 100%;
+  background-image: none;
+  filter: invert(1);
 
+}
+/*carousel styling*/
+.carousel {
+  width:750px;
+  height:750px;
+  position:center;
+  float:center;
+  margin-left:250px;
+
+}
+/*caption styling*/
+caption{
+	caption-side: top;
+	margin-left: 400px;
+}
 /* End of main.css */
-

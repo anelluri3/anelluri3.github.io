@@ -99,6 +99,16 @@ td, th {
 	animation-fill-mode:forwards;
 	opacity: 0;
 }
+tr:hover {
+	background-color: green;
+}
+
+tr:nth-child(1) {
+	background-color: rgb(70,70,70);
+}
+tr:nth-child(2) {
+	background-color: rgb(50,50,50);
+}
 
 td:nth-child(1) {
   animation-delay: 0s;
@@ -186,5 +196,28 @@ td:nth-child(11) {
 #billsBackground {
 	background:linear-gradient(to right, rgb(0, 51, 141), rgb(198, 12, 48));
 }
+/*carousel conrol styling*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  color:black;
+  background-size: 100%, 100%;
+  background-image: none;
+  filter: invert(1);
 
+}
+/*carousel styling*/
+.carousel {
+  width:750px;
+  height:750px;
+  position:center;
+  float:center;
+  margin-left:125px;
+}
+/*caption styling*/
+caption{
+	caption-side: top;
+	margin-left: 375px;
+}
 /*END OF TEAM COLORS*/

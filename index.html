@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" type="text/css" href="main.css" id="csslink">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	
 	<title>Home</title>
 	<script>
 	    function toggleCSS() {
@@ -14,20 +17,64 @@
           } else {
             currentCSS.setAttribute('href', 'main.css');
           }
-      }
+		}
+		/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+		function myFunction() {
+			var x = document.getElementById("myLinks");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+			} else {
+				x.style.display = "block";
+			}
+		}	
+		var dropdownBtns = document.querySelectorAll(".dropdown-btn");
+
+		// Loop through the dropdown buttons
+		for (var i = 0; i < dropdownBtns.length; i++) {
+			dropdownBtns[i].addEventListener("click", function() {
+				// Toggle the "active" class on the clicked button
+				this.classList.toggle("active");
+
+				// Get the dropdown content that follows the clicked button
+				var dropdownContent = this.nextElementSibling;
+
+				// Toggle the display of the dropdown content
+				if (dropdownContent.style.display === "block") {
+					dropdownContent.style.display = "none";
+				} else {
+					dropdownContent.style.display = "block";
+				}
+			});
+		}
 	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </head>
 <body>
 	<header>
 		<nav>
-			<ul>
-				<li><a href="index.html" class="active">Home</a></li>
-				<li><a href="overview.html">Player Overview</a></li>
-				<li><a href="stats.html">Player's Stats</a></li>
-				<li><a href="gallery.html">Photo Gallery</a></li>
-			</ul>
+			<div class="topnav">
+				<a href="#home"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/National_Football_League_logo.svg/1200px-National_Football_League_logo.svg.png" width="75" height="75" alt="NFL"></a>
+				<!-- Navigation links (hidden by default) -->
+				<div id="myLinks">
+					<a href="index.html" class="active">Home</a>
+				<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Player Info</a>
+          <ul class="dropdown-menu" style="margin:0; padding:0;">
+            <li><a class="dropdown-btn" href="overview.html">Player Overview</a></li>
+            <!--<li><hr class="dropdown-divider"></li>-->
+			<li><a class="dropdown-btn" href="stats.html">Player Stats</a></li>
+            </ul>
+        </li>
+
+				<a href="gallery.html">Photo Gallery</a>
+				</div>
+				<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
 		</nav>
-		<button onclick="toggleCSS()" style="cursor:pointer">Switch Style</button>
+		<button class="switchButton" onclick="toggleCSS()" style="cursor:pointer; right: 3.6%;">Switch Style</button>
 	</header>
 	<main>
 		<p class="finalists">
@@ -43,7 +90,7 @@
 	</main>
 </body>
 <footer>
-	&copy; 2023 Alexander McFarland/Abhiram Nelluri (Group 2)
+	&copy; 2023 Alexander McFarland/Abhiram Nelluri/David DiCesare/Ian Harrison (Group 2)
 </footer>
 </html>
 
